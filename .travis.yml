@@ -5,7 +5,7 @@ env:
   global:
   - secure: "H+22UiGeRhzHyeQViMXUnJ8ULO9wcsHQIYgPU8MpJaEEggKM7WDIQrJauYfDAVOXnKON0kocdlpDmxmOAc4pNgNUTxf66xfz5RJcMgxhK7zyigdg5MFh8YEUJuDQfg/aaLlAJou3M3B6ay6reenUpArUdlUsza6Db28bCaada04="
   matrix:
-  - MAILOSAUR_BASE_URL=https://mailosaur.com/api/ MAILOSAUR_SMTP_HOST=mailosaur.io
-  - MAILOSAUR_BASE_URL=https://next.mailosaur.com/api/ MAILOSAUR_SMTP_HOST=ms-smtp.uk
+  - MAILOSAUR_BASE_URL=https://mailosaur.com/api MAILOSAUR_SMTP_HOST=mailosaur.io
+  - MAILOSAUR_BASE_URL=https://next.mailosaur.com/api MAILOSAUR_SMTP_HOST=ms-smtp.uk
 notifications:
   slack: mailosaur:CsJ9RruwjqHPKr1Iugk8GDtX
