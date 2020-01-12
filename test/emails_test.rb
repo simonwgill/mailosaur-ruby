@@ -5,6 +5,7 @@ require './test/mailer'
 require 'date'
 
 module Mailosaur
+    # rubocop:disable Metrics/ClassLength
     class EmailsTest < Test::Unit::TestCase
         class << self
             def startup
@@ -65,6 +66,7 @@ module Mailosaur
             end
         end
 
+        # rubocop:disable Metrics/BlockLength
         context 'search' do
             should 'throw an error if no criteria' do
                 assert_raise(Mailosaur::MailosaurError) do
@@ -151,6 +153,7 @@ module Mailosaur
                 end
             end
         end
+        # rubocop:enable Metrics/BlockLength
 
         context 'spam_analysis' do
             should 'perform a spam analysis on an email' do
@@ -263,4 +266,5 @@ module Mailosaur
               assert_equal('image/png', file2.content_type)
           end
     end
+  # rubocop:enable Metrics/ClassLength
 end
