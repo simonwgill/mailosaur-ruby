@@ -119,6 +119,37 @@ module Mailosaur
                     assert_equal(target_email.subject, results[0].subject)
                 end
             end
+
+            context 'match' do
+                should 'match unspecified' do
+                    target_email = @@emails[1]
+                    criteria = Mailosaur::Models::SearchCriteria.new()
+                    criteria.sent_to = target_email.to[0].email
+                    criteria.body = 'this is a test'
+                    results = @@client.messages.search(@@server, criteria).items
+                    assert_equal(1, results.length)
+                end
+
+                should 'match all' do
+                    target_email = @@emails[1]
+                    criteria = Mailosaur::Models::SearchCriteria.new()
+                    criteria.sent_to = target_email.to[0].email
+                    criteria.body = 'this is a test'
+                    criteria.match = 'all'
+                    results = @@client.messages.search(@@server, criteria).items
+                    assert_equal(1, results.length)
+                end
+
+                should 'match any' do
+                    target_email = @@emails[1]
+                    criteria = Mailosaur::Models::SearchCriteria.new()
+                    criteria.sent_to = target_email.to[0].email
+                    criteria.body = 'this is a test'
+                    criteria.match = 'any'
+                    results = @@client.messages.search(@@server, criteria).items
+                    assert_equal(6, results.length)
+                end
+            end
         end
 
         context 'spam_analysis' do
