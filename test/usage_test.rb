@@ -1,9 +1,11 @@
 require 'mailosaur'
 require 'test/unit'
 require 'shoulda/context'
+require_relative 'vcr_helper'
 
 module Mailosaur
     class UsageTest < Test::Unit::TestCase
+      VCR.use_cassette('usage') do
         setup do
             api_key = ENV['MAILOSAUR_API_KEY']
             base_url = ENV['MAILOSAUR_BASE_URL']
@@ -37,5 +39,6 @@ module Mailosaur
               assert_not_nil(result.items[0].sms)
             end
         end
+      end
     end
 end

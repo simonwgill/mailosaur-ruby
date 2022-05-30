@@ -30,4 +30,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop', '~> 1.19.0'
   s.add_development_dependency 'shoulda-context', '~> 1.2', '>= 1.2.2'
   s.add_development_dependency 'test-unit', '~> 3.2', '>= 3.2.7'
+  s.add_development_dependency 'vcr', '~> 6.1'
 end

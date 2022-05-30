@@ -1,0 +1,14 @@
+{
+  "yaml.schemas": {
+    "file:/Users/simongill/Library/Application Support/Code/User/globalStorage/amazonwebservices.aws-toolkit-vscode/sam.schema.json": [
+      "infra/config/templates/lambda_functions/lambda_functions.yml",
+      "generated_config/lambda_functions_package.yml"
+    ],
+    "file:///Users/simongill/Library/Application%20Support/Code/User/globalStorage/amazonwebservices.aws-toolkit-vscode/sam.schema.json": [
+      "infra/config/templates/lambda_functions/lambda_functions.yml",
+      "generated_config/lambda_functions_package.yml"
+    ],
+    "file:///Users/simongill/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/simongill/projects/mailosaur-ruby/.github/workflows/build.yml"
+  }
+}
